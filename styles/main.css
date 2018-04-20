@@ -1,0 +1,307 @@
+/*
+
+	
+	Comments:
+	Exercise 3 Prototype
+	Date 1/30/2018
+	Name: Jacques Favre
+	Class CGS2829.0M1 Advance Web Site
+	Language HTML 5, CSS 3, jquerry
+	Incude:
+	Slicknav responsive menu, courtesy of MIT http://slicknav.io Copyright (c) 2016 Josh Cope
+	Terms and Privacy, courtesy of http://getterms.io/	
+	
+	
+	color: #dce2ea;  light blue box link menu**** darker
+	color: #eff2f5;  light blue background****lighter
+	color: #282828;  almost black 
+	color: #400000; red almost black for site header
+	
+*/
+/* reset selector */
+* {
+	margin: 0;
+	padding: 0;
+	}
+
+
+/* the styles for the elements */
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 100%;
+/*     width: 99%; */
+	max-width: 960px;
+	margin: 0 auto; 
+	background-color: #eff2f5;  /* to make all light blue #dce2ea = darker  */
+		
+	}
+
+html {
+	 /* to make sides light blue, all same color  when done    */	
+	 /* to make all light blue to see width at building  */	 
+	/* 	background-color: #dce2ea;  */
+	 /* to make sides light blue, all same color  when done    */		
+	background-color: #eff2f5;  
+	
+	}
+
+
+/*the style for the h2 within the header*/
+	header h2 {
+		font-size: 300%;
+ 		font-weight: 900;		/*to make bold */
+		font-family: Impact, "Arial Black", Verdana, Arial, Helvetica, sans-serif; 
+/*Arial Black font not showing on mobile, Added quotes, still not working*/ 
+		color: #400000; /*red almost black*/
+		padding: .6em 0 0 .4em;
+
+		float: left;
+
+	}
+	
+	header h2 a {								/* header link style same color, no line*/
+		text-decoration: none;
+		color: #800000;
+
+	}
+
+
+
+	/* the styles for the navigation menu **********************************************/
+	
+	#menu {
+		padding: 2em 0 0 60%;   /* the position right left of navigation menu */
+	}
+
+	#menu ul {
+		list-style-type: none;
+		
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	
+	#menu ul li {
+		float: left;
+		width: 30%;/* (160/800)*100 = 20%*/
+	}
+	
+	#menu ul li a {
+		display: block;
+		text-align: center;
+		padding: 1.1em 0;
+		text-decoration: none;
+		background-color: #eff2f5;  /* to make sides almost black  */
+		color: black; /*90% light blue text link color*/
+		font-weight: bold;
+	}
+	
+	#menu ul ul { 
+	display: none;
+	position: absolute;
+	top: 100%;
+	}
+	
+	#menu ul ul li {
+		float: none;
+	}
+	
+	#menu ul li:hover  >  ul {
+	display: block;
+	width: 100%;
+	}
+
+	
+	#menu > ul::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	
+	#menu ul li a:hover {
+	background-color: #dce2ea; /*90% little darker when hover*/
+	}
+/* 	End menu items ******************************************/
+
+/* the styles for the main section */
+main {
+	clear: left;
+}
+	/*the style for the h1 within the main always 2.5% of screen size padding on both sides, regardless os screen size*/
+	main h1{
+	font-size: 180%;
+	padding:  1em 2.5%;
+	margin: 0;
+	}
+	
+		/*the style for the h2 to make smaller within the main */
+	main h2 {
+	font-size: 170%;
+	padding: .5em 2.5%; /*top right bottom left   */
+	}
+	
+	main h3 {
+	font-size: 130%;
+	padding: .5em 2.5%;
+	}
+
+	
+	main p {
+		font-size: 120%;
+		padding:  .5em 2.5%;
+	}
+	
+	 img {  
+/* 	float: left; */
+	margin: 0 1em 2em 0;
+	border: 1px solid #282828;
+	border-radius: 2px;
+	max-width: 100%;
+	}	
+	
+/* contact page Style */
+	/* list on contacyt page */
+	main ul {
+	padding: 0 0 .25em 3.5em;
+	}
+	
+	main li { 
+	padding-bottom: .35em;
+	font-size: 120%;
+	}
+	
+	main a {
+		text-decoration: none;
+		color: #800000;
+		}
+
+/* the styles for the google Form to make it responsive Wrapper and Wrapper iframe*/		
+/* same as a youtube video, here the full width */
+/* the wrapper, how the box will suround the form*/	
+	.Wrapper {
+		position: relative;
+		padding-bottom: 130%; 
+		padding-top: 25px;
+		margin-bottom: 1%;
+		height: 0;
+	}
+	
+/* the styles for the iframe, position and size of form*/	
+	
+	.Wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+ 		width: 100%;     /*Video 100% of main who is 90% of page */
+		height: 100%;
+	}
+	
+
+	
+	/* 	style for term and privacy page ol li ol*******************************************/
+	main ol {
+		padding: 0 0 .25em 2.5em;
+		font-size: 120%;
+	}
+	
+	main ol li {
+		font-size: 100%;
+	}
+	
+main ol li ol {
+		font-size: 100%;
+	}
+
+	main ul ul li { padding-top: .35em;} 
+		
+	
+/* the style for text in the footer*************************************************/
+footer p {
+	text-align: center;
+	color: #282828; 
+	padding: 1em 0;
+	}
+/* style color for link text footer	 */
+	footer p a {
+	color: #282828; 
+}
+footer {
+
+
+	background-color: #eff2f5;  /* to make sides almost black */
+	margin-top: 1em;
+	margin-bottom : 5px;
+	clear: right;
+}
+/*********************************************************************************************/
+/* Media Query for tablet view**********RESPONSIVE**********************************/
+/* no Mobile menu, desktop view, switces below*/
+.slicknav_menu {
+	display: none;
+}
+
+/* tablet portrait to standard 960  no change here*/
+@media only screen and (max-width: 959px) {
+
+	/* Google form wrapper incraased hight to prevent double scolling of form inside page */
+	.Wrapper {
+		padding-bottom: 160%; 
+			}	
+}  
+
+
+/* mobile landscape to tablet portrait SWITCH MENU**************************************/
+@media only screen and (max-width: 769px) {
+	/* #menu is the original menu */
+	/*Turn OFF menu*/
+	.js #menu {
+		display:none;
+
+		
+	}
+	/*Turn ON mobile menu*/
+	.js .slicknav_menu {
+		display:block;
+/* 		mobile menu icon float to right of header, works here */
+/* 				float: left;	 */
+				
+				}
+	
+	/*reduce size header 300% to 250% */
+	/*stop float to center, remove top padding*/
+	header h2  {
+	font-size: 250%;
+	float: none;
+	text-align: center;
+	padding: 0 0 0 .4em;
+	}	
+	
+	/* make link email me bigger on small  touch screen  and blue to show link when using touch screen*/	
+	main p a { 
+	font-size: 150%; 
+	color: blue;
+	} 
+	
+	/* Google form wrapper incraased hight to prevent double scolling of form inside page */
+	.Wrapper {
+		padding-bottom: 270%; 
+			}	
+}
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 415px) {
+	body { font-size: 90%; }
+	/* Make link "email me" bigger on phone size screen to make easier to click*/
+	main  p a { 
+	font-size: 160%; 
+	} 	
+/* 	adjust title to fit in one line */
+		main h1{
+		font-size: 160%;
+	}
+	/* Google form wrapper incraased hight to prevent double scolling of form inside page*/
+	.Wrapper {
+		padding-bottom: 325%; 
+			}	 
+} 	
+
